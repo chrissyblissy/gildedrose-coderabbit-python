@@ -21,6 +21,13 @@ class GildedRoseTest(unittest.TestCase):
         items = self.run_update_quality_once([Item("foo", 0, 0)])
         self.assertEqual("foo", items[0].name)
 
+    # TODO need to fix this!
+    def test_foo(self):
+        items = [Item("foo", 0, 0)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEqual("fixme", items[0].name)
+
         
 if __name__ == '__main__':
     unittest.main()
